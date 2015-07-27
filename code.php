@@ -64,7 +64,7 @@ if( ! class_exists( 'Network_Info' ) ) {
             $html .= __( 'Total Sites: ', 'ni' ) . count( $sites );
             
             $users = $this->_db->get_var( "SELECT COUNT(1) FROM {$this->_db->users}" );
-            $html .= '<br>' . __( 'Total Users: ', 'ni' ) . count( $users );
+            $html .= '<br>' . __( 'Total Users: ', 'ni' ) . $users;
             
             if( $this->is_pro_site_active ){
                 $pro_sites = 0;
