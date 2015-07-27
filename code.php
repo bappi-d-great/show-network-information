@@ -63,7 +63,7 @@ if( ! class_exists( 'Network_Info' ) ) {
             $sites = wp_get_sites();
             $html .= __( 'Total Sites: ', 'ni' ) . count( $sites );
             
-            $users = $this->_db->get_results("SELECT * FROM {$this->_db->prefix}users");
+            $users = $this->_db->get_var( "SELECT COUNT(1) FROM {$this->_db->users}" );
             $html .= '<br>' . __( 'Total Users: ', 'ni' ) . count( $users );
             
             if( $this->is_pro_site_active ){
