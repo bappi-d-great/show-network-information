@@ -28,7 +28,7 @@ if( ! class_exists( 'Network_Info' ) ) {
         private static $_instance;
         
         /**
-         * If prosite is active
+         * If WPMU prosite is active
          */
         private $is_pro_site_active;
         
@@ -37,6 +37,9 @@ if( ! class_exists( 'Network_Info' ) ) {
          */
         private $_db;
         
+        /**
+         * Create singleton instance
+         */ 
         public static function get_instance() {
             if ( ! self::$_instance instanceof Network_Info ) {
                 self::$_instance = new Network_Info();
